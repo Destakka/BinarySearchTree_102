@@ -69,6 +69,20 @@ namespace BinarySearchTree_102
                     currentNode = currentNode.rightchild;
             }
         }
+        public void Inorder(Node ptr)
+        {
+            if(ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+            return ;
+            }
+            if (ptr != null)
+            {
+                Inorder(ptr.leftchild);
+                Console.Write(ptr.info + "");
+                Inorder(ptr.rightchild);
+            }
+        }
     }
     internal class Program
     {
