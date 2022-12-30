@@ -127,6 +127,39 @@ namespace BinarySearchTree_102
                 Console.Write("\nEnter your choice (1-5) : ");
                 char ch = Convert.ToChar(Console.ReadLine());
                 Console.WriteLine();
+                switch(ch)
+                {
+                    case '1':
+                        {
+                            Console.Write("Enter a word: ");
+                            string word = Console.ReadLine();
+                            x.insert(word);
+                        }
+                        break;
+                    case '2':
+                        {
+                            x.Inorder(x.ROOT);
+                        }
+                        break;
+                    case '3':
+                        {
+                            x.preorder(x.ROOT);
+                        }
+                        break;
+                    case '4':
+                        {
+                            x.postorder(x.ROOT);
+                        }
+                        break;
+                    case '5':
+                        return;
+                    default:
+                        {
+                            Console.WriteLine("Invalid option");
+                            break;
+                        }
+
+                }
             }
         }
 
