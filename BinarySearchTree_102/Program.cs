@@ -21,7 +21,7 @@ namespace BinarySearchTree_102
         }
     }
     /*A nodde class consists os there things, the information, reference to the right child, and reference to the left child*/
-    
+
     class BinaryTree
     {
         public Node ROOT;
@@ -31,7 +31,7 @@ namespace BinarySearchTree_102
         }
         public void insert(string element) /*Insert a node in the  binary search tree*/
         {
-            Node tmp, parent = null, currentNode =  null;
+            Node tmp, parent = null, currentNode = null;
             Search(element, ref parent, ref currentNode);
             if (currentNode == null) /*Check if the node to be inserted already inserted or not*/
             {
@@ -41,7 +41,7 @@ namespace BinarySearchTree_102
             else /*if the spesified node is not present*/
             {
                 tmp = new Node(element, null, null); /*Creates a Node*/
-                if (parent ==  null) /*If the trees is empty*/
+                if (parent == null) /*If the trees is empty*/
                 {
                     ROOT = tmp;
                 }
@@ -55,7 +55,7 @@ namespace BinarySearchTree_102
                 }
             }
         }
-        public void Search (string element, ref Node parent, ref Node currentNode)
+        public void Search(string element, ref Node parent, ref Node currentNode)
         {
             /*This function searches the currentNode of the specified Node as well as the current Node of its parent */
             currentNode = ROOT;
@@ -71,10 +71,10 @@ namespace BinarySearchTree_102
         }
         public void Inorder(Node ptr)
         {
-            if(ROOT == null)
+            if (ROOT == null)
             {
                 Console.WriteLine("Tree is empty");
-            return ;
+                return;
             }
             if (ptr != null)
             {
@@ -97,7 +97,7 @@ namespace BinarySearchTree_102
                 preorder(ptr.rightchild);
             }
         }
-        public void postorder (Node ptr) /*Performs the postorder traversal of the tree*/
+        public void postorder(Node ptr) /*Performs the postorder traversal of the tree*/
         {
             if (ROOT != null)
             {
@@ -111,11 +111,24 @@ namespace BinarySearchTree_102
                 Console.Write(ptr.info + " ");
             }
         }
-    }
-    internal class Program
-    {
+
+
         static void Main(string[] args)
         {
+            BinaryTree x = new BinaryTree();
+            while (true)
+            {
+                Console.WriteLine("\nMenu");
+                Console.WriteLine("1. Implement insert operation");
+                Console.WriteLine("2. Perform inorder traversal");
+                Console.WriteLine("3. Perform preorder traversal");
+                Console.WriteLine("4. Perform postorder traversal");
+                Console.WriteLine("5. Exit");
+                Console.Write("\nEnter your choice (1-5) : ");
+                char ch = Convert.ToChar(Console.ReadLine());
+                Console.WriteLine();
+            }
         }
+
     }
 }
