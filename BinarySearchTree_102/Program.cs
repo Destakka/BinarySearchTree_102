@@ -20,6 +20,16 @@ namespace BinarySearchTree_102
             rightchild = r;
         }
     }
+    /*A nodde class consists os there things, the information, reference to the right child, and reference to the left child*/
+    
+    class BinaryTree
+    {
+        public Node ROOT;
+        public BinaryTree()
+        {
+
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
